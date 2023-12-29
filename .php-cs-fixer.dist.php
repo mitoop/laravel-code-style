@@ -89,7 +89,7 @@ $rules = [
     ],
     'native_function_casing' => true,
     'native_type_declaration_casing' => true,
-    // 'no_alias_functions' => true, // risky fixer
+    'no_alias_functions' => true, // risky fixer
     'no_alias_language_construct_call' => true,
     'no_alternative_syntax' => true,
     'no_binary_string' => true,
@@ -130,7 +130,7 @@ $rules = [
         'statements' => ['break', 'clone', 'continue', 'echo_print', 'return', 'switch_case', 'yield'],
     ],
     'no_unneeded_braces' => true,
-    // 'no_unreachable_default_argument_value' => true, // risky fixer
+    'no_unreachable_default_argument_value' => true, // risky fixer
     'no_unset_cast' => true,
     'no_unused_imports' => true,
     'no_useless_return' => true,
@@ -143,7 +143,7 @@ $rules = [
     'object_operator_without_whitespace' => true,
     'ordered_imports' => ['sort_algorithm' => 'alpha', 'imports_order' => ['const', 'class', 'function']],
     'ordered_interfaces' => true,
-    // 'ordered_traits' => true, // risky fixer
+    'ordered_traits' => true, // risky fixer
     'phpdoc_indent' => true,
     'phpdoc_inline_tag_normalizer' => true,
     'phpdoc_no_access' => true,
@@ -217,7 +217,7 @@ $rules = [
     'Laravel/laravel_phpdoc_alignment' => true,
 ];
 
-// 根据实际项目目录编写, 下面是 laravel 文件架构
+// 根据实际项目目录编写, 下面是 laravel 文件结构
 $projectPath = __DIR__;
 $finder = Finder::create()
     ->in([
@@ -235,7 +235,7 @@ $finder = Finder::create()
 
 return (new Config())->setFinder($finder)
     ->setRules($rules)
-    ->setRiskyAllowed(false) // Laravel preset 包含了三个风险项(已注释), 请自行决定开启
+    ->setRiskyAllowed(true)
     ->setUsingCache(true)
     ->registerCustomFixers([
         new class() implements FixerInterface
