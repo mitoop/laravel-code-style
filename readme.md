@@ -1,9 +1,6 @@
-# PHP CS Fixer - Laravel Coding Style Ruleset
+# Laravel Preset
 
-PHP CS Fixer `^2.0` use `.php_cs.dist`
+##### Laravel Coding Style Ruleset
 
-PHP CS Fixer `^3.0` use `.php-cs-fixer.dist.php`
+适配 PHP CS Fixer `^3.0`, 效果同 `laravel/pint` 的 laravel preset. 在低版本`PHP`中可以使用此规则平替`laravel/pint`.
 
-@see [Larave Shift](https://gist.github.com/laravel-shift/cab527923ed2a109dda047b97d53c200)
-
-请使用 [Laravel Pint](https://github.com/laravel/pint) 替代
